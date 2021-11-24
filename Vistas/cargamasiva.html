@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIGPRES</title>
+    <!--descripción del tema de la página-->
+    <meta name="description" content="prestaciones sigges"> 
+    <!--palabras claves de búsqueda-->
+    <meta name="keywords" content="sigges, prestación">
+    <!--icono para la pestaña-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="shortcut icon" href="../assets/img/registro medicina.jpg" type="image/x-icon">
+   
+</head>
+
+<body>
+    <header class="fondo-gris">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                      <a class="nav-link" aria-current="page" href="home.php"><strong>Inicio</strong></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" aria-current="page" href="busqueda.html"><strong>Búsqueda</strong></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="cargamasiva.html"><strong>Carga Masiva</strong></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="tutorial.html"><strong>Videos Tutoriales</strong></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="administracion.php"><strong>Perfiles Usuarios</strong></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="sigges.html"><strong>Conexión SIGGES</strong></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="../php/cerrar_sesion.php" ><strong>CERRAR SESIÓN</strong></a>
+                    </li>
+              </ul>
+
+            </div>
+
+    </header>
+    
+   <!-- zona de contenido -->
+   <div class="container">
+        
+    <h3>Seleccione el archivo excel csv para carga masiva, el archivo debe ser separado por punto y coma</h3>
+    <br>
+    <div class="mb-3">
+        <label for="formFile" class="form-label">Seleccione Archivo</label>
+        <input class="form-control" type="file" id="formFile">
+      </div>
+      <br><br>
+
+    <!-- tabla donde se cargaran -->
+    <table class="table" id="tablacarga"> </table>
+</div>
+    
+    <!-- zona de footer -->
+    <footer>
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-md-4 blue-border">
+                    <p>
+                        Mac Iver 541, Santiago, Chile - Teléfono: (+562) 2574 0100
+                    </p>
+                </div>
+                <div class="col-md-8 d-flex justify-content-end a-enlaces red-border ">
+                    <a href="https://www.minsal.cl/seguridad_de_la_informacion/">Seguridad de la Información</a>
+                    <a href="https://www.minsal.cl/">Minsal </a>
+                    <a href="https://www.minsal.cl/">Minsal </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script >
+      const x = document.querySelector("input");
+      x.addEventListener("change", () => {
+          const fr = new FileReader();
+          fr.onloadend = e => {
+              // se carga cada elemento en la variable r
+              let r = fr.result.split("\n").map(e => {
+                  return e.split(";");
+              });
+      
+              // Por cada elemento en r//
+              r.forEach(e => {
+                  let m = e.map(e => {
+       
+                      let contenido = e;  
+      
+                      //Cargo en el Table Data//
+                      return `<td>${e}</td>`;
+                  }).join("");
+                  const ce = document.createElement("tr");
+                  ce.innerHTML = m;
+      
+                  if (ce.innerText !== "") {
+                      document.querySelector("#tablacarga").append(ce);
+                  }
+              });
+      
+              console.log(r)
+          }
+          fr.readAsText(x.files[0]);
+      })
+      </script>
+    </body>
+</html>

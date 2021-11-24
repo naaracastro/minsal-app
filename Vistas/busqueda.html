@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIGPRES</title>
+    <!--descripción del tema de la página-->
+    <meta name="description" content="prestaciones sigges"> 
+    <!--palabras claves de búsqueda-->
+    <meta name="keywords" content="sigges, prestación">
+    <!--icono para la pestaña-->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="shortcut icon" href="../assets/img/registro medicina.jpg" type="image/x-icon">
+    
+   
+</head>
+
+<body>
+    <header class="fondo-gris">
+      <div class="container">
+        <div class="row">
+        <div class="col-12 col-md-6">
+
+            <img src="../assets/img/minSal.png" class="rounded float-start" alt="minsal">
+        </div>
+        <div class="col-12 col-md-6">
+            
+            <img src="../assets/img/LogoSIGRE.png" class="rounded float-end" alt="LogoSIGRE">
+        </div>
+        </div>
+    </div>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="home.php"><strong>Inicio</strong></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="busqueda.html"><strong>Búsqueda</strong></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="cargamasiva.html"><strong>Carga Masiva</strong></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="tutorial.html"><strong>Videos Tutoriales</strong></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="administracion.php"><strong>Perfiles Usuarios</strong></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="sigges.html"><strong>Conexión SIGGES</strong></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../php/cerrar_sesion.php" ><strong>CERRAR SESIÓN</strong></a>
+              </li>
+                </ul>
+                <form class="d-flex">
+                  <input class="form-control me-2" type="search" placeholder="Busqueda" aria-label="Search">
+                  <button class="btn btn-outline-success" type="submit">Buscar</button>
+                </form>
+              </div>
+            </div>
+          </nav>
+          
+    </header>
+  
+    <form action="../php/busqueda.php" method="post">
+    <div class="container">
+        <h3>Llene el campo de busqueda y presione buscar</h3><br>
+
+        
+        <div class="row col-sm-3" id="idformbusqueda">
+            <div class="col-sm-12 busqueda">
+                <input type="text" placeholder="Run Beneficiario" id="idnombre" name="rut" class="form-control" aria-describedby="passwordHelpInline">
+            </div>
+            <div class="col-sm-12 busqueda">
+                <input type="text" placeholder="Sexo" id="idnombre" class="form-control" aria-describedby="passwordHelpInline">
+            </div>
+            <div class="col-sm-12 busqueda">
+                <input type="text" placeholder="Previsión" id="idnombre" class="form-control" aria-describedby="passwordHelpInline">
+            </div>
+            <div class="col-sm-12 busqueda">
+                <input type="text" placeholder="Edad" id="idnombre" class="form-control" aria-describedby="passwordHelpInline">
+            </div>
+        </div>
+        
+        <div class="row col-sm-3" id="idformbusqueda">
+            <div class="col-sm-12 busqueda">
+                <input type="text" placeholder="Fecha Otorgamiento" id="idnombre" class="form-control" aria-describedby="passwordHelpInline">
+            </div>
+            <div class="col-sm-12 busqueda">
+                <input type="text" placeholder="Establecimiento" id="idnombre" class="form-control" aria-describedby="passwordHelpInline">
+            </div>
+            <div class="col-sm-12 busqueda">
+                <input type="text" placeholder="Compra" id="idnombre" class="form-control" aria-describedby="passwordHelpInline">
+            </div>
+            <div class="col-sm-12 busqueda">
+                <input type="text" placeholder="Prestador" id="idnombre" class="form-control" aria-describedby="passwordHelpInline">
+            </div>
+        </div>
+        
+        <div class="row col-sm-3" id="idformbusqueda">
+            <div class="col-sm-12 busqueda">
+                <input type="text" placeholder="NºPS" id="idnombre" class="form-control" aria-describedby="passwordHelpInline">
+            </div>
+            <div class="col-sm-12 busqueda">
+                <input type="text" placeholder="Problema de Salud/Programa n° GES" id="idnombre" class="form-control" aria-describedby="passwordHelpInline">
+            </div>
+            <div class="col-sm-12 busqueda">
+                <input type="text" placeholder="COD.IS" id="idnombre" class="form-control" aria-describedby="passwordHelpInline">
+            </div>
+            <div class="col-sm-12 busqueda">
+                <input type="text" placeholder="Int.Sanitaria(IS)" id="idnombre" class="form-control" aria-describedby="passwordHelpInline">
+            </div>
+        </div>
+        <div class="row col-sm-3" id="idformbusqueda">
+            <div class="col-sm-12 busqueda">
+                <input type="text" placeholder="Código Trazadora" id="idnombre" class="form-control" aria-describedby="passwordHelpInline">
+            </div>
+            <div class="col-sm-12 busqueda">
+                <input type="text" placeholder="Glosa Trazadora" id="idnombre" class="form-control" aria-describedby="passwordHelpInline">
+            </div>
+            <div class="col-sm-12 busqueda">
+                <input type="text" placeholder="Codigo Familia" id="idnombre" class="form-control" aria-describedby="passwordHelpInline">
+            </div>
+            <div class="col-sm-12 busqueda">
+                <input type="text" placeholder="Familia" id="idnombre" class="form-control" aria-describedby="passwordHelpInline">
+            </div>
+           
+        </div>
+        
+        <br><br>
+        <button type="submit" class="btn btn-primary">Buscar</button>
+        <input type="button" class="btn btn-primary" onclick="tableToExcel('testTable', 'W3C Example Table')" value="Export to Excel">
+      </form>
+    </div>
+
+
+    
+    <div class="container-fluid">
+        <br><br>
+        <table class="table" id="testTable">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Run</th>
+                <th scope="col">Sexo</th>
+                <th scope="col">Previsión</th>
+                <th scope="col">Edad</th>
+                <th scope="col">Fecha Otorg.</th>
+                <th scope="col">Establecimiento</th>
+                <th scope="col">Compra</th>
+                <th scope="col">Prestador</th>
+                <th scope="col">N° Ps</th>
+                <th scope="col">Problema</th>
+                <th scope="col">Cod Is</th>
+                <th scope="col">Int Sanit.</th>
+                <th scope="col">Cod Trazadora</th>
+                <th scope="col">Glosa Traza.</th>
+                <th scope="col">Cod Familia</th>
+                <th scope="col">Familia</th>
+             </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+                <td>@mdo</td>
+                <td>@mdo</td>
+                <td>@mdo</td>
+                <td>@mdo</td>
+                <td>@mdo</td>
+                <td>@mdo</td>
+                <td>@mdo</td>
+                <td>@mdo</td>
+                <td>@mdo</td>
+                <td>@mdo</td>
+                <td>@mdo</td>
+                <td>@mdo</td>
+                <td>@mdo</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+                <td>@mdo</td>
+                <td>@mdo</td>
+                <td>@mdo</td>
+                <td>@mdo</td>
+                <td>@mdo</td>
+                <td>@mdo</td>
+                <td>@mdo</td>
+                <td>@mdo</td>
+                <td>@mdo</td>
+                <td>@mdo</td>
+                <td>@mdo</td>
+                <td>@mdo</td>
+                <td>@mdo</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+                <td>@mdo</td>
+                <td>@mdo</td>
+                <td>@mdo</td>
+                <td>@mdo</td>
+                <td>@mdo</td>
+                <td>@mdo</td>
+                <td>@mdo</td>
+                <td>@mdo</td>
+                <td>@mdo</td>
+                <td>@mdo</td>
+                <td>@mdo</td>
+                <td>@mdo</td>
+                <td>@mdo</td>
+              </tr>
+   
+            </tbody>
+          </table>
+    </div>
+
+    
+    <!-- zona de footer -->
+    <footer>
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-md-4 blue-border">
+                    <p>
+                        Mac Iver 541, Santiago, Chile - Teléfono: (+562) 2574 0100
+                    </p>
+                </div>
+                <div class="col-md-8 d-flex justify-content-end a-enlaces red-border ">
+                    <a href="https://www.minsal.cl/seguridad_de_la_informacion/">Seguridad de la Información</a>
+                    <a href="https://www.minsal.cl/">Minsal </a>
+                    <a href="https://www.minsal.cl/">Minsal </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+       <script src="../assets/js/funciones.js"></script>
+    </body>
+
+</html>
